@@ -1,0 +1,30 @@
+---
+export interface Props {
+  onClick?: string;
+  className?: string;
+  type?: HTMLButtonElement['type'];
+  variation?: "primary" | "secondary" | 'black';
+}
+
+const { variation = "primary", className = "", type = 'button' } = Astro.props;
+---
+
+<button
+  type={type}
+  class:list={[
+    className,
+    "up-button",
+    variation === "primary" ? "btn-up-primary" : "",
+    variation === "secondary" ? "btn-up-secondary" : "",
+    variation === "black" ? "btn-up-black" : ""
+  ]}
+>
+  <slot />
+</button>
+<style is:global>
+  .up-button:disabled {
+    opacity: 0.3;
+    background-color: #4b7125;
+    color: white;
+  }
+</style>

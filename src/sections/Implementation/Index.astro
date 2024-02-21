@@ -1,0 +1,34 @@
+---
+import Card from "./components/Card.astro";
+---
+
+<section class="container mx-auto px-6 mt-12 lg:mt-16">
+  <div>
+    <h3 class="headline-regular-3">Implementação 
+      <span class="gradient-horizontal-dark">
+        simples <span class="gradient-neutral-x600">e</span> rápida
+      </span>
+    
+    </h3>
+  </div>
+  <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
+    <div class="reveal-left">
+      <Card  
+        title="Passo 01"
+        description="Analisamos detalhadamente suas demandas financeiras."
+      />
+    </div>
+    <div class="reveal-bottom">
+      <Card  
+        title="Passo 02"
+        description="Realizamos a integração da arquitetura PIX ao seu sistema, proporcionando eficiência e agilidade."
+      />
+    </div>
+    <div class="reveal-right">
+      <Card  
+        title="Passo 03"
+        description="Adeus aos dias de espera! Receba seus pagamentos de forma instantânea, mantendo suas finanças sempre atualizadas."
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+---
+import Steps from './components/Steps.astro'
+---
+
+<section class="bg-neutral-x200 py-8 lg:py-10">
+  <div class="reveal-bottom container mx-auto px-6">
+    <Steps
+      list={[
+        {
+          img: "/img/devices/desktop.svg",
+          title: "Web",
+          description: "Pagamentos pelo navegador em qualquer dispositivo (desktop, tablet ou smartphone).",
+        },
+        {
+          img: "/img/devices/smartphone.svg",
+          title: "In-app",
+          description: "Experiências de pagamento por aplicativos IOS, Android e React Native.",
+        },
+        {
+          img: "/img/devices/pay-link.svg",
+          title: "Pay by Link",
+          description: "Envie links de pagamento prontos para seus clientes usando qualquer dispositivo.",
+        }
+      ]}
+    />
+  </div>
+</section>

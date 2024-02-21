@@ -1,0 +1,79 @@
+---
+import UpInput from "./../../components/Input.astro";
+import UpButton from "./../../components/Button.astro";
+---
+
+<form
+  id="lead-form"
+  novalidate
+  class="lead-form w-full grid grid-cols-1 gap-6 bg-white px-6 py-8 rounded-2xl"
+  action="/send.php"
+  method="post"
+>
+  <p class="headline-regular-4">Preencha o formulário para nosso time comercial entrar em contato.</p>
+
+  <UpInput 
+    label="Nome"
+    label="Nome"
+    id="nome" name="name" placeholder="Qual seu nome" required="true" />
+    
+    <UpInput
+    label="E-mail"
+    id="email"
+    name="email"
+    type="email"
+    placeholder="Digite seu e-mail"
+    required="true"
+    />
+    
+    <UpInput
+    label="Telefone com DDD"
+    id="phone"
+    name="phone"
+    placeholder="Ex: (11) 99999-0000"
+    required="true"
+  />
+
+  <UpButton variation="black" type="submit" className="mt-4 submit-button">
+    <span class="loading loading-spinner loading-md"></span>
+      
+    <span class="text-content">Quero contratar</span>
+    
+    <span class="success">Enviado com sucesso !</span>
+    
+  </UpButton>
+</form>
+
+<style is:global lang="css">
+  /* DEFAULT */
+  .lead-form .submit-button .loading{
+    display: none;
+  }
+  .lead-form .submit-button .success{
+    display: none;
+  }
+  .lead-form.is--loading .submit-button .text-content{
+    display: block;
+  }
+  
+  /* IS LOADING */
+  .lead-form.is--loading .submit-button .loading{
+    display: block;
+  }
+  .lead-form.is--loading .submit-button,
+  .lead-form.is--success .submit-button{
+    background: #dadada;
+    border-color: transparent;
+    pointer-events: none;
+  }
+  .lead-form.is--loading .submit-button .text-content{
+    display: none;
+  }
+  /* SUCCESS */
+  .lead-form.is--success .submit-button .text-content{
+    display: none;
+  }
+  .lead-form.is--success .submit-button .success{
+    display: block;
+  }
+  </style>

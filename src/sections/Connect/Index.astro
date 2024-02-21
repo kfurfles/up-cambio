@@ -1,0 +1,35 @@
+---
+import { appendToUrlContact } from '@/contansts/index'
+const URL_CONTACT = appendToUrlContact('')
+---
+
+<section class="container mx-auto px-6 mt-12 lg:mt-40">
+  <div class="p-8 rounded-2xl bg-neutral-x600 md:text-center flex flex-col gap-6 lg:flex-row lg:items-center">
+    <div class="max-w-[572px] mx-auto text-center lg:text-left">
+      <div class="headline-regular-3 lg:headline-regular-2 text-neutral-x100">
+        Conecte-se sem esforço com nossas integrações
+      </div>
+  
+      <p class="paragraph-3 mt-6 lg:mt-8 text-neutral-x100">
+        Facilitamos a integração com diversas plataformas. Confira algumas das integrações disponíveis.
+      </p>
+      
+      <div class="flex justify-center mt-12 lg:justify-start">
+        <a
+          href={URL_CONTACT}
+          target="_blank"
+          class="btn-up-primary w-full max-w-44"
+        >
+          Quero contratar
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <img
+          class="reveal-bottom relative mx-auto"
+          src="/img/connect/main-image.svg"
+        />
+    </div>
+  </div>
+</section>

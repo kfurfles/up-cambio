@@ -1,0 +1,28 @@
+---
+import { appendToUrlContact } from "@/contansts/index";
+
+import Logo from "./Logo.astro";
+
+const URL_CONTACT = appendToUrlContact("");
+---
+
+<header class="header">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center justify-between py-4">
+      <div class="mx-auto lg:ml-0 lg:mr-auto">
+        <Logo className="block" />
+      </div>
+      <div class="hidden gap-4 md:gap-10 lg:flex">
+        <a
+          href={URL_CONTACT}
+          target="_blank"
+          class="btn btn-up-primary w-fit"
+        >
+          Quero contratar
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style is:global lang="css"></style>

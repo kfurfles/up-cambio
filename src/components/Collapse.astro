@@ -1,0 +1,61 @@
+---
+export interface Props {
+  topics: {
+    title: string;
+    descriptions: string | string[];
+  }[];
+}
+const { topics } = Astro.props;
+---
+
+<div class="grid w-full grid-cols-1 gap-6">
+  {
+    topics.map(({ descriptions, title }, idx) => {
+      const id = `${title}-${idx}`;
+
+      return (
+        <div>
+          <div class="collapse relative rounded-lg bg-neutral-x200">
+            <input
+              type="checkbox"
+              class="peer"
+              id={id}
+            />
+            <div class="collapse-title pl-6 label-2 pr-16">{title}</div>
+            <label
+              for={id}
+              class="peer-checked:bg-primary text-primary absolute right-0 top-1/2 flex  h-[52px] w-[52px] -translate-y-1/2 -rotate-90 cursor-pointer items-center justify-center bg-opacity-50 transition duration-300 ease-in-out peer-checked:rotate-0 peer-checked:text-white"
+            >
+              <svg
+                width="41"
+                height="40"
+                viewBox="0 0 41 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8333 16.6666L20.5 23.3333L27.1667 16.6666"
+                  stroke="#312E2E"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </label>
+            <div class="collapse-content max-w-2xl pr-16">
+              {Array.isArray(descriptions) ? (
+                <div class="grid grid-cols-1 gap-4">
+                  {descriptions.map((text) => (
+                    <p class=" paragraph-3">{text}</p>
+                  ))}
+                </div>
+              ) : (
+                <p class=" paragraph-3">{descriptions}</p>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    })
+  }
+</div>

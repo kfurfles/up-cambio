@@ -1,0 +1,44 @@
+---
+export interface Props {
+  className?: string;
+  placeholder: string;
+  label: string;
+  type?: "text" | "email";
+  id: string;
+  name: string;
+  min?: number;
+  required: string;
+}
+
+const {
+  className = "",
+  id,
+  name,
+  required,
+  placeholder,
+  type = "text",
+  label,
+} = Astro.props;
+---
+<label class:list={[className, "w-full"]} >
+  <div class="label">
+    <span class="text-neutral-x500 label-4">{label}</span>
+  </div>
+  <input 
+    type={type} 
+    id={id} 
+    name={name} 
+    required={required} 
+    placeholder={placeholder} 
+    class="input input-bordered focus:outline-none border-neutral-x400 w-full focus:border-neutral-x500" 
+  />
+</label>
+
+<style is:global lang="css">
+.input.error {
+  border-color: tomato;
+}
+.input ~ label.error{
+  color: tomato
+}
+</style>

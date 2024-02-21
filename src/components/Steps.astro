@@ -1,0 +1,29 @@
+---
+interface Props {
+  list: {
+    title: string;
+    description: string;
+  }[];
+  className?: string;
+}
+
+const { list, className } = Astro.props;
+---
+
+<ul class:list={["flex flex-col gap-12", className]}>
+  {
+    list.map((item) => {
+      return (
+        <li class="reveal-bottom flex gap-4 items-center">
+          <div>
+            <img src="/icons/generic-icon.svg" class="w-8 min-w-8" />
+          </div>
+          <div>
+            <div class="label-3">{item.title}</div>
+            <div class="paragraph-3 mt-2 text-sm text-neutral-x500">{item.description}</div>
+          </div>
+        </li>
+      );
+    })
+  }
+</ul>

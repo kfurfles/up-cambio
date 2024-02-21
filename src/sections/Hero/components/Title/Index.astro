@@ -1,0 +1,29 @@
+---
+import { appendToUrlContact } from '@/contansts/index'
+const URL_CONTACT = appendToUrlContact('')
+---
+
+<div class="grid grid-cols-1 text-center lg:text-left max-w-[612px] mx-auto">
+  <div class="headline-regular-1 text-neutral-x100">
+    Eleve seus pagamentos para o próximo nível com a <span class="gradient-horizontal-light">revolução do PIX</span>
+  </div>
+  <p class="paragraph-1 text-neutral-x100 mt-10">
+    Transforme seus recebimentos e simplifique suas finanças com a eficiência do PIX. Pagamentos instantâneos, seguros e sem complicações.
+  </p>
+  <div class="flex gap-4 items-center justify-center mt-12 flex-col sm:flex-row lg:justify-start">
+    <a
+      href={URL_CONTACT}
+      target="_blank"
+      class="btn-up-primary"
+    >
+      Quero contratar
+    </a>
+    <a
+      href={URL_CONTACT}
+      target="_blank"
+      class="btn-up-secondary"
+    >
+      Falar com especialista
+    </a>
+  </div>
+</div>

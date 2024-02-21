@@ -1,0 +1,32 @@
+---
+import Steps from "./components/Steps.astro";
+---
+
+<section class="container mx-auto px-6 mt-12 lg:mt-16">
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+    
+    <div class="reveal-bottom lg:order-2 lg:ml-auto">
+      <Steps 
+        list={[
+          {
+            title: 'Entidades Governamentais',
+            description: 'Oferecemos uma solução completa para simplificar e agilizar os processos de pagamento de entidades governamentais. Com nossa plataforma, você pode garantir.'
+          },
+          {
+            title: 'Empresas Privadas',
+            description: 'Nossa solução foi projetada para atender às necessidades específicas das empresas privadas, oferecendo uma maneira rápida e eficaz de receber pagamentos.'
+          }
+        ]}
+      />
+    </div>
+
+    <div class="reveal-bottom lg:order-1">
+      <div class="relative mx-auto lg:mr-auto lg:ml-0 w-full max-w-[536px]">
+        <img
+          class="reveal-bottom relative"
+          src="/img/bussines-sections/main-image.svg"
+        />
+      </div>      
+    </div>
+  </div>
+</section>

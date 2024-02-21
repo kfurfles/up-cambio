@@ -1,0 +1,42 @@
+---
+import Collapse from "../../components/Collapse.astro";
+---
+
+<section
+  class="container mx-auto px-6 mt-12 lg:mt-40"
+  id="faq"
+>
+  <div class="">
+    <h3 class="headline-regular-2 w-full text-center">Ainda com dúvidas?</h3>
+    <div class="mx-auto mt-4 text-center paragraph-2">
+      Confira abaixo as perguntas mais frequentes de nossos clientes e suas respostas.    </div>
+
+      
+    <div class="mx-auto mt-16 max-w-4xl">
+      <Collapse
+        topics={[
+          {
+            title: "Some Title FAQ",
+            descriptions: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam laborum, quidem, tempore itaque voluptatum earum tenetur quam sapiente dolorem atque voluptate quaerat vitae."
+          },
+          {
+            title: "Some Title FAQ",
+            descriptions: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam laborum, quidem, tempore itaque voluptatum earum tenetur quam sapiente dolorem atque voluptate quaerat vitae."
+          },
+          {
+            title: "Some Title FAQ",
+            descriptions: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam laborum, quidem, tempore itaque voluptatum earum tenetur quam sapiente dolorem atque voluptate quaerat vitae."
+          },
+          {
+            title: "Some Title FAQ",
+            descriptions: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam laborum, quidem, tempore itaque voluptatum earum tenetur quam sapiente dolorem atque voluptate quaerat vitae."
+          },
+          {
+            title: "Some Title FAQ",
+            descriptions: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam laborum, quidem, tempore itaque voluptatum earum tenetur quam sapiente dolorem atque voluptate quaerat vitae."
+          },
+        ]}
+      />
+    </div>
+  </div>
+</section>

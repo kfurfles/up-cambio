@@ -1,0 +1,19 @@
+---
+export interface Props {
+  className?: string;
+  variation?: "default" | "white";
+}
+const baseURL = import.meta.env.BASE_URL;
+
+const { className = "", variation = "default" } = Astro.props;
+---
+
+<a
+  href={baseURL}
+  class:list={["whitespace-nowrap font-semibold", className]}
+>
+  <img
+    src={variation === "white" ? "/img/logo.svg" : "/img/logo-default.svg"}
+    alt="logo UP Cambio"
+  />
+</a>
