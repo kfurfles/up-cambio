@@ -64,6 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     },
   });
+
+  ScrollReveal().reveal('.reveal-bottom', { origin: 'bottom', distance: '50px', duration: 1000, delay: 200 });
+  ScrollReveal().reveal('.reveal-right', { origin: 'right', distance: '50px', duration: 1000, delay: 400 });
+  ScrollReveal().reveal('.reveal-left', { origin: 'left', distance: '50px', duration: 1000, delay: 600 });
 });
 
 async function sendEmail({ name, lastName, email, description}) {

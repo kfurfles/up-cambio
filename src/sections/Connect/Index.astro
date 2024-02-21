@@ -3,14 +3,17 @@ import { appendToUrlContact } from '@/contansts/index'
 const URL_CONTACT = appendToUrlContact('')
 ---
 
-<section class="container mx-auto px-6 mt-12 lg:mt-40">
+<section class="container mx-auto px-6 mt-12 lg:mt-40 reveal-bottom">
   <div class="p-8 rounded-2xl bg-neutral-x600 md:text-center flex flex-col gap-6 lg:flex-row lg:items-center">
     <div class="max-w-[572px] mx-auto text-center lg:text-left">
-      <div class="headline-regular-3 lg:headline-regular-2 text-neutral-x100">
-        Conecte-se sem esforço com nossas integrações
+      <div class="headline-regular-3 lg:headline-regular-2 text-neutral-x100 gradient-horizontal-light">
+        Conecte-se 
+        <span class="inline gradient-neutral-x200">
+          sem esforço com nossas integrações
+        </span>
       </div>
   
-      <p class="paragraph-3 mt-6 lg:mt-8 text-neutral-x100">
+      <p class="paragraph-3 lg:paragraph-1 mt-6 lg:mt-8 text-neutral-x100">
         Facilitamos a integração com diversas plataformas. Confira algumas das integrações disponíveis.
       </p>
       
@@ -27,7 +30,7 @@ const URL_CONTACT = appendToUrlContact('')
 
     <div>
       <img
-          class="reveal-bottom relative mx-auto"
+          class="relative mx-auto"
           src="/img/connect/main-image.svg"
         />
     </div>
