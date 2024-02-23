@@ -3,9 +3,30 @@ import Steps from "./components/Steps.astro";
 ---
 
 <section class="container mx-auto px-6 mt-12 lg:mt-16">
-  <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
-    
-    <div class="reveal-bottom lg:order-2 lg:ml-auto">
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+
+    <div class="text-left lg:order-2">
+      <div class="headline-regular-3 lg:headline-regular-2">
+        <span class="gradient-horizontal-light inline">
+          Versatilidade <span class="gradient-neutral-x600 inline">e</span> abrangência
+        </span>
+        para tipos de negócio
+      </div>
+      <p class="paragraph-3 lg:paragraph-2 mt-6 lg:mt-8 text-neutral-x500">
+        Nossas soluções de pagamento se adaptam ao seu negócio, independente do nicho ou formato.
+      </p>
+    </div>
+
+    <div class="reveal-bottom lg:order-1">
+      <div class="relative mx-auto lg:mr-auto lg:ml-0 w-full max-w-[428px]">
+        <img
+          class="reveal-bottom relative w-full"
+          src="/img/bussines-sections/img-how-works.png"
+        />
+      </div>      
+    </div>
+
+    <div class="reveal-bottom lg:order-3 lg:ml-auto">
       <Steps 
         list={[
           {
@@ -18,15 +39,6 @@ import Steps from "./components/Steps.astro";
           }
         ]}
       />
-    </div>
-
-    <div class="reveal-bottom lg:order-1">
-      <div class="relative mx-auto lg:mr-auto lg:ml-0 w-full max-w-[536px]">
-        <img
-          class="reveal-bottom relative"
-          src="/img/bussines-sections/main-image.svg"
-        />
-      </div>      
     </div>
   </div>
 </section>

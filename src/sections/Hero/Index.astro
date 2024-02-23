@@ -2,19 +2,19 @@
 import Title from "./components/Title/Index.astro";
 ---
 
-<section class="container mx-auto px-6">
-  <div class="grid grid-cols-1 lg:grid-cols-2">
-    <div class="reveal-left flex items-center">
-      <Title />
-    </div>
-
-    <div class="reveal-bottom mt-8">
-      <div class="relative mx-auto w-full max-w-[590px]">
+<section class="container mx-auto px-6 mb-10">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="reveal-bottom mt-8 lg:order-2">
+      <div class="relative w-full max-w-[590px]">
         <img
           class="reveal-bottom relative"
           src="/img/hero/hero-image.png"
         />
       </div>      
+    </div>
+
+    <div class="reveal-left flex items-center lg:order-1">
+      <Title />
     </div>
   </div>
 </section>
