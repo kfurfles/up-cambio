@@ -74,15 +74,9 @@ async function sendEmail({ name, lastName, email, description}) {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
+  console.log({ name, lastName, email, description})
+
+  alert('Missing send email implementation at public/js/index line 77')
   await sleep(3000)
   return true
-  // return fetch("http://localhost:3000/api/send-email", {
-  //   method: "POST",
-  //   headers: myHeaders,
-  //   body: JSON.stringify({ name, lastName, email, description}),
-  //   mode: 'cors'
-  // })
-  // .then(response => response.text())
-  // .then(result => console.log(result))
-  // .catch(error => console.log('error', error));
 }
