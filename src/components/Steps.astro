@@ -2,6 +2,7 @@
 interface Props {
   list: {
     title: string;
+    icon: string;
     description: string;
   }[];
   className?: string;
@@ -16,7 +17,7 @@ const { list, className } = Astro.props;
       return (
         <li class="reveal-bottom flex gap-4 items-center">
           <div>
-            <img src="/icons/generic-icon.svg" class="w-8 min-w-8" />
+            <img src={item.icon} class="w-10 min-w-10" />
           </div>
           <div>
             <div class="label-3 lg:label-2">{item.title}</div>
